@@ -1,5 +1,5 @@
 // Write an expression that uses an array prototype method (filter, reduce, map, etc.)
-//   to compute the total value of the mahines in the inventory array;
+//   to compute the total value of the machines in the inventory array;
 
 const inventory = [
     { type: "machine", value: 5000 },
@@ -10,9 +10,16 @@ const inventory = [
 ]
 
 // Filter out things that arent machines:
-let justMachines = YOUR_CODE_HERE
-console.log(justMachines)
+let justMachines = inventory.filter(item => item.type === "machine");
+console.log(justMachines[1]);
 
 // Calculate the total value of the machines
-let totalMachineValue = YOUR_CODE_HERE
-console.log(totalMachineValue)
+let reducer = (total, num) => total + num;
+
+let totalMachineValue = array => {
+    let valueArray = [];
+    array.map(item => valueArray.push(item.value));
+    return valueArray.reduce(reducer);
+
+}
+console.log(totalMachineValue(justMachines));

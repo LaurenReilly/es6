@@ -1,8 +1,8 @@
+let user = {}
 
-
-let getFullName = user => {
+let getFullName = (user = {firstName: "None", lastName: "doubleNone"} ) => {
     let fullName = user.firstName + user.lastName;
-    return fullName
+    console.log(fullName);
 }
 
 // Calling this function will error out if you don't provide input arguments

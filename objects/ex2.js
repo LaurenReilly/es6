@@ -3,3 +3,11 @@ let values = ['val1', 'val2', 'val3'];
 
 
 // Using a single object literal, create an object that maps key1, key2, and key3 to val1, val2, and val3, respectively
+
+let object = {
+    [keys[0]] : values[0],
+    [keys[1]] : values[1],
+    [keys[2]] : values[2],
+}
+
+console.log(object.key1, object.key2, object.key3);

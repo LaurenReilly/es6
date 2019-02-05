@@ -5,3 +5,9 @@ let four = 4;
 let five = 5;
 
 // Coalesce the above variables into a single object
+
+let numbers = {
+    one, two, three, four, five
+}
+
+console.log(numbers.one)
