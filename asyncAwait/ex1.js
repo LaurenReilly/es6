@@ -9,3 +9,7 @@ let getDogsOwnersBestFriend = () => {
         return friend.name;
     })
 }
+
+let getDogs = async () => {
+    
+}

@@ -1,7 +1,7 @@
 
 
 let fullName = user => {
-    let { name: { first = "", last = "" }} = user;
+    let {name : { first = "", last = "" } = {}} = user;
 
     return first + ' ' + last;
 }
