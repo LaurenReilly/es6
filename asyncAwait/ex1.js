@@ -11,5 +11,8 @@ let getDogsOwnersBestFriend = () => {
 }
 
 let getDogs = async () => {
-    
+    let dog = await get('/dog/1');
+    let owner = await get(`/owner/${dog.owner}`);
+    let friend = await get(`/friend/${owner.bestFriend}`);
+    return friend.name;
 }
